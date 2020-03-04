@@ -1,15 +1,8 @@
 <?php
-include 'database.php';
+  include 'database.php';
+  include 'partials/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/app.css">
-    <title>php-hotel-crud</title>
-  </head>
   <body>
     <div class="container">
       <div class="row">
@@ -19,8 +12,8 @@ include 'database.php';
             <thead>
               <tr>
                 <th>ID</th>
+                <th>ROOM NUMBER</th>
                 <th>FLOOR</th>
-                <th></th>
                 <th></th>
               </tr>
             </thead>
@@ -29,8 +22,9 @@ include 'database.php';
                  foreach ($rooms as $room) { ?>
                    <tr>
                      <td><?php echo $room['id']; ?></td>
+                     <td><?php echo $room['room_number']; ?></td>
                      <td><?php echo $room['floor']; ?></td>
-                     <td><a href="#">VIEW</a></td>
+                     <td><a href="show/show.php?id=<?php echo $room['id']; ?>">VIEW</a></td>
                      <td><a href="#">UPDATE</a></td>
                      <td>DELETE</td>
                    </tr>
