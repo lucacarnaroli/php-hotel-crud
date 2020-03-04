@@ -11,24 +11,35 @@ include 'database.php';
     <title>php-hotel-crud</title>
   </head>
   <body>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>FLOOR</th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td><a href="#"></a></td>
-          <td><a href="#"></a></td>
-          <td><a href="#"></a></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Tutte le stanze</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>FLOOR</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php if (!empty($rooms)) {
+                 foreach ($rooms as $room) { ?>
+                   <tr>
+                     <td><?php echo $room['id']; ?></td>
+                     <td><?php echo $room['floor']; ?></td>
+                     <td><a href="#">VIEW</a></td>
+                     <td><a href="#">UPDATE</a></td>
+                     <td>DELETE</td>
+                   </tr>
+                <?php }
+                } ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
