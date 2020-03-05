@@ -1,5 +1,5 @@
 <?php
-  include_once 'env.php';
+  include_once __DIR__ . '/../env.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +14,13 @@
   <body>
     <header>
       <nav class="navbar navbar-dark bg-dark">
-        <div class="navbar-brand">Hotel Boolean</div>
+        <div class="navbar-brand"><h2>Hotel Boolean</h2></div>
         <ul class="navbar-nav">
           <li><a href="<?php echo $basePath ?>">Tutte le stanze</a></li>
         </ul>
-
       </nav>
     </header>
-  </body>
+
+    <div class="wrapper mt-4">
+
+<?php include 'footer.php'; ?>

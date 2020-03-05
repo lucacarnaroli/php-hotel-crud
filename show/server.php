@@ -14,4 +14,3 @@
     echo "Query error";
   }
   $conn->close();
-
