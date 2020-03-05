@@ -1,5 +1,5 @@
 <?php
-  include 'database.php';
+  include 'server.php';
   include 'partials/header.php';
 ?>
 
