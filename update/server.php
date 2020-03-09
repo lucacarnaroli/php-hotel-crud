@@ -17,6 +17,12 @@ if(empty($_POST['room_number'])) {
     die('Numero stanza non inserito');
 }
 
+foreach ($_POST as $key => $value) {
+    if (intval($value) == 0) {
+        die($key . ' ' . 'NON è un numero');
+    }
+}
+
 $roomId = $_POST['id'];
 $beds = $_POST['beds'];
 $floor = $_POST['floor'];

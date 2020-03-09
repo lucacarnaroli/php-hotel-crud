@@ -32,3 +32,4 @@ function getById($conn,$table,$id) {
   }
   return $result;
 }
+
