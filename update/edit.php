@@ -2,6 +2,7 @@
 include __DIR__ . '/../database.php';
 include __DIR__ . '/../partials/header.php';
 
+
 if(!empty($_GET['id'])) {
     $roomId = $_GET['id'];
 }
@@ -9,8 +10,7 @@ if(!empty($_GET['id'])) {
 $sql = "SELECT * FROM stanze WHERE id = $roomId";
   $result = $conn->query($sql);
 
-  if ($result && $result->num_rows > 0) {
-
+  if ($result && $result->num_rows > 0) {   
      $room = $result->fetch_assoc();
   } else {
       die('ID non esistente');

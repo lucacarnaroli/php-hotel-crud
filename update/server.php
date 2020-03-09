@@ -6,6 +6,15 @@ include __DIR__ . '/../database.php';
 if(empty($_POST['id'])) {
     die('ID non inserito');
 }
+if(empty($_POST['beds'])) {
+    die('Letti non inserito');
+}
+if(empty($_POST['floor'])) {
+    die('Piano non inserito');
+}
+if(empty($_POST['room_number'])) {
+    die('Numero stanza non inserito');
+}
 
 $roomId = $_POST['id'];
 $beds = $_POST['beds'];
@@ -22,15 +31,14 @@ $result = $conn->query($sql);
       die('ID non esistente');
   }
 
-$sql = "UPDATE 'stanze'
-        SET room_number = $roomNumber , 'beds' = $beds , 'floor' = $floor
-        WHERE id = $roomId";
+$sql = "UPDATE stanze SET room_number = $roomNumber , beds = $beds , floor = $floor WHERE id = $roomId";
 
-  
+
+$result = $conn->query($sql);
 
 if ($result) {
     header("Location: $basePath/show/show.php?id=$roomId");
 } else {
     echo 'KO';
 }
-$result = $conn->query($sql); 
+ 
