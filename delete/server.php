@@ -14,9 +14,9 @@ $result = getById($conn,'stanze',$roomId);
 
   $sql = "DELETE FROM stanze WHERE id = $roomId";
 
-  $result = $conn->query($sql);
+  $resultDelete = $conn->query($sql);
 
-  if ($result) {
+  if ($resultDelete) {
     header("Location: $basePath?roomNumber=$roomId");
   } else {
     echo 'ko';
