@@ -15,7 +15,7 @@ function getAll($conn,$table) {
   } else {
     $results = false;
   }
-  $conn->close();
+  
   return $results;
 }
 
@@ -30,6 +30,5 @@ function getById($conn,$table,$id) {
   } else {
     $result = false;
   }
-  $conn->close();
   return $result;
 }

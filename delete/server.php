@@ -1,12 +1,14 @@
 <?php
   include __DIR__ . '/../database.php';
+  include __DIR__ . '/../function.php';
 
 
   $roomId = $_POST['id'];
 
-  $sql = "SELECT * FROM stanze WHERE id = $idRoom";
+  // $sql = "SELECT * FROM stanze WHERE id = $idRoom";
+$result = getById($conn,'stanze',$roomId);
 
-  if (empty($_POST['id'])) {
+  if (!$result) {
     die('ID non correto');
   }
 
