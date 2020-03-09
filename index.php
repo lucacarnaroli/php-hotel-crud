@@ -25,8 +25,8 @@ if (!empty($_GET['roomNumber'])) { ?>
               </tr>
             </thead>
             <tbody>
-              <?php if (!empty($rooms)) {
-                 foreach ($rooms as $room) { ?>
+              <?php if (!empty($results)) {
+                 foreach ($results as $room) { ?>
                    <tr>
                      <td><?php echo $room['id']; ?></td>
                      <td><?php echo $room['room_number']; ?></td>
