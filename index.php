@@ -32,7 +32,7 @@ if (!empty($_GET['roomNumber'])) { ?>
                      <td><?php echo $room['room_number']; ?></td>
                      <td><?php echo $room['floor']; ?></td>
                      <td><a href="show/show.php?id=<?php echo $room['id']; ?>">VIEW</a></td>
-                     <td><a href="#">UPDATE</a></td>
+                     <td><a href="update/edit.php?id=<?php echo $room['id']; ?>">UPDATE</a></td>
                      <td>
                        <form action="delete/server.php" method="post">
                          <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
