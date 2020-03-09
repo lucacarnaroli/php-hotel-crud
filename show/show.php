@@ -8,10 +8,11 @@ include __DIR__ . '/../partials/header.php';
             <div class="card">
               <ul>
                 <?php include 'server.php' ?>
-                <li>ID: <?php echo $room['id']; ?></li>
-                <li>Floor: <?php echo $room['floor']; ?></li>
                 <li>Room number: <?php echo $room['room_number']; ?></li>
+                <li>Floor: <?php echo $room['floor']; ?></li>
                 <li>Beds: <?php echo $room['beds']; ?></li>
+                <li>Creato il: <?php echo $room['created_at']; ?></li>
+                <li>Aggiornato il: <?php echo $room['updated_at']; ?></li>
               </ul>
           </div>
         </div>

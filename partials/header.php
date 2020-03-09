@@ -16,7 +16,8 @@
       <nav class="navbar navbar-dark bg-dark">
         <div class="navbar-brand"><h2>Hotel Boolean</h2></div>
         <ul class="navbar-nav">
-          <li><a href="<?php echo $basePath ?>">Tutte le stanze</a></li>
+          <li><a class="navbar link" href="<?php echo $basePath ?>">Tutte le stanze</a></li>
+          <li><a class="navbar link" href="<?php echo $basePath ?>create/create.php">Inserisci una stanza</a></li>
         </ul>
       </nav>
     </header>
